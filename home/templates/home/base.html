@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Encomiendas {% endblock %}</title>
+    <link rel="stylesheet" href="/static/home/css/styles.css">
+</head>
+<body>
+     
+    <h1> Pagina en construccion </h1>
+<ul>
+    <li><a href="{% url 'home' %}">Usuario</a></li>
+    <li><a href="{% url 'about' %}">Ruta</a></li>
+    <li><a href="{% url 'contact' %}">Encomiendas</a></li>
+    <li><a href="{% url 'pago' %}">Pago</a></li>
+    <li><a href="{% url 'base' %}">Inicio</a></li>
+</ul>
+<!--contenido -->
+{% block content %} {% endblock %}
+</body>
+</html>
