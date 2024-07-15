@@ -1,3 +1,26 @@
+<?php
+$con = mysqli_connect("localhost","root","","encomienda");
+#Encomienda
+if(isset($_POST['submit'])){
+$txtCed1 = $_POST['txtCed1'];
+$txtCed2 = $_POST['txtCed2'];
+$txtCodruta = $_POST['txtCodruta'];
+$txtTelf1 = $_POST['txtTelf1'];
+$txtTelf2 = $_POST['txtTelf2'];
+$txtDesc = $_POST['txtDesc'];
+$txtFecha = date('Y/m/d');
+$txtEst = $_POST['txtEst'];
+$txtOfc = $_POST['txtOfc'];
+$query = mysqli_query($con, "INSERT INTO `encomienda` 
+( `cod_remitente`, `cod_destinatario`,
+`telefono_rem`, `telefono_dest`, `descripcion`,`estado`,`cod_oficinista`, `cod_ruta`,`fecha`) 
+VALUES ( '$txtCed1', '$txtCed2','$txtTelf1', '$txtTelf2', '$txtDesc', '$txtEst','$txtOfc', '$txtCodruta','$txtFecha')");
+header('Location: pago.html');
+exit;
+#$rs = mysqli_query($con, $sql);
+}
+
+?>
 {% extends 'home/base.html' %}
 
 {% block title %} Registro de encomienda {% endblock %} 
@@ -58,8 +81,13 @@
     </fieldset>
     </form>
     <br>
-    
+    <nav class="nav-down">
+        <a href="datos.php">Usuarios </a>
+        <a href="index.html">Menu </a>
+    </nav>
 
     
     </body>
-{% endblock %}
+    {% endblock %}
+    
+    

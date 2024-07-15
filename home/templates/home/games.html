@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+
+{% block title %} Juegos en PlaystationsStore {% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="/static/home/css/styles.css">
+</head>
+<body>
+    <h1>BIBLIOTECA DE RUTAS</h1>
+    <nav class="nav-down">
+        <a href="{% url 'games_list' %}">Archivo de Rutas</a>
+    </nav>
+</body>
+{% endblock %}

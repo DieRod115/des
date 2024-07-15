@@ -5,18 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} Encomiendas {% endblock %}</title>
     <link rel="stylesheet" href="/static/home/css/styles.css">
+     <style>
+    /* Estilos para la frase */
+    .frase-destacada {
+        font-size: 50px; /* Tamaño del texto */
+        color: #181818 ; /* Color del texto */
+        font-weight: bold; /* Negrita */
+        text-align: center; /* Alineación centrada */
+        margin: 20px 0; /* Margen superior e inferior */
+
+    }
+    </style>
+     <style>
+        /* Estilos básicos para los botones */
+        .boton {
+            padding: 10px 20px;
+            background-color: #007bff; /* Color de fondo normal */
+            color: #fff; /* Color del texto */
+            text-decoration: none; /* Sin subrayado */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Borde redondeado */
+            cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse */
+            transition: background-color 0.3s ease; /* Transición suave de color */
+        }
+      
+    </style>
 </head>
+
 <body>
      
-    <h1> Pagina en construccion </h1>
-<ul>
-    <li><a href="{% url 'home' %}">Usuario</a></li>
-    <li><a href="{% url 'about' %}">Ruta</a></li>
-    <li><a href="{% url 'contact' %}">Encomiendas</a></li>
-    <li><a href="{% url 'pago' %}">Pago</a></li>
-    <li><a href="{% url 'base' %}">Inicio</a></li>
-</ul>
+    <h1> Encomiendas DAG </h1>
+    <div class="contenedor-principal sombra" style="background-image: url('/static/home/img/li.jpg');">
+    
+<nav class="nav-down">
+    <a href="{% url 'base' %}">Inicio</a>
+    <a href="{% url 'home' %}">Usuario</a>
+    <a href="{% url 'about' %}">Ruta</a>
+    <a href="{% url 'games' %}">Media</a>
+    <a href="{% url 'regencomienda' %}">Encomiendas</a>
+    <a href="{% url 'pagos' %}">Pago</a>
+</nav>
+</div>
+<div class="frase-destacada">
+        Envíos rápidos, seguros y confiables a tu alcance.
+    </div>
+
 <!--contenido -->
 {% block content %} {% endblock %}
 </body>
 </html>
+
